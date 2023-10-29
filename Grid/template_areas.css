@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background: rgb(0, 0, 0);
+}
+
+.items {
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* This section defines the overall layout of the container element. */
+.container {
+    width: 100%; /* Make the container element full width. */
+    height: 90vh; /* Make the container element 90% of the viewport height. */
+    display: grid; /* Set the container element to display as a grid. */
+    gap: 5px; /* Add a 5px gap between all grid items. */
+    grid-template-columns: repeat(12, 1fr); /* Create a grid with 12 columns, each of which is 1fr wide. */
+    grid-template-rows: 50px auto 50px; /* Create a grid with three rows, the first and third of which are 50px high, and the second of which grows to fill the available space. */
+  
+    /* This section uses the grid-template-areas property to define the layout of the grid items. */
+    grid-template-areas:
+      "h h h h h h h h h h h h" /* Define the header area. */
+      "a a a a m m m m m m m m" /* Define the aside and main areas. */
+      "f f f f f f f f f f f f" /* Define the footer area. */
+    ;
+  }
+  
+  /* This media query applies a different grid layout for screens that are 800px or less wide. */
+  @media screen and (max-width:800px) {
+    .container {
+      grid-template-rows: 40px 1fr 2fr 40px; /* Change the row heights to create a more responsive layout. */
+      grid-template-areas:
+        "h h h h h h h h h h h h"
+        "a a a a a a a a a a a a"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f"
+      ;
+    }
+  }
+/* Grid areas technique */
+.header {
+    background: lightblue;
+    grid-area: h;
+  }
+  
+  .aside {
+    background: lightgreen;
+    grid-area: a;
+  }
+  
+  .main {
+    background: lightslategray;
+    grid-area: m;
+  }
+  
+  .footer {
+    background-color: aqua;
+    grid-area: f;
+  }
+  

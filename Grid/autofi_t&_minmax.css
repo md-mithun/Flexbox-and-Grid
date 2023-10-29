@@ -1,0 +1,94 @@
+/* Reset all margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a 20px padding to the body element */
+body {
+    padding: 20px;
+    background: rgb(0, 0, 0);
+}
+
+/* Style the .items element */
+.items {
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Style the .container element */
+.container {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    gap: 5px;
+
+    /* Use a repeat(auto-fit, minmax(100px, 1fr)) grid template columns to create a grid that will automatically fit as many columns as possible, with each column being at least 100px wide, but growing to fill the available space if there is enough room. */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /*grid-template-rows:= is used to explicitly define the rows of a grid. It takes a list of values, each of which represents the size of a row. The values can be specified in pixels, percentages, or fractional units.
+
+    grid-auto-rows:= is used to define the implicit rows of a grid. Implicit rows are rows that are not explicitly defined by grid-template-rows. grid-auto-rows takes a single value, which represents the default size of all implicit rows.*/
+    grid-template-rows: repeat(2, 100px);
+}
+
+/* Style the .item element */
+.item1 {
+    background: lightblue;
+}
+
+.item2 {
+    background: lightcoral;
+}
+
+.item3 {
+    background: lightcyan;
+}
+
+.item4 {
+    background: lightgoldenrodyellow;
+}
+
+.item5 {
+    background: lightgoldenrodyellow;
+}
+
+.item6 {
+    background: lightgrey;
+}
+
+.item7 {
+    background: lightpink;
+}
+
+.item8 {
+    background: lightsalmon;
+}
+
+.item9 {
+    background: lightseagreen;
+}
+
+.item10 {
+    background: lightblue;
+}
+
+.item11 {
+    background: lightcoral;
+}
+
+.item12 {
+    background: lightcyan;
+}
+
+/*
+  .box {
+  display: grid;
+  grid-auto-rows: 100px;
+}
+.item{
+  grid-row: 2;
+}
+In this example, the container element has a grid with an implicit row that is 100px high. The .item element is placed in the second row of the grid.
+  */

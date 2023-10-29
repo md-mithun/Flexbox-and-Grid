@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  grid-auto-rows: 75px;
+  grid-auto-flow: dense;
+}
+
+.squre {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: rgb(226, 82, 82);
+}
+
+.horizonal {
+  background: rgb(46, 209, 92);
+  grid-column: span 3;
+}
+
+.vertical {
+  grid-row: span 3;
+  background: rgb(73, 148, 195);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="vertical">Vertical</div>
+        <div class="squre">Squre</div>
+        <div class="horizonal">Horizontal</div>
+        <div class="vertical">Vertical</div>
+        <div class="squre">Squre</div>
+        <div class="squre">Squre</div>
+        <div class="vertical">Vertical</div>
+        <div class="horizonal">Horizontal</div>
+        <div class="squre">Squre</div>
+        <div class="horizonal">Horizontal</div>
+        <div class="horizonal">Horizontal</div>
+        <div class="vertical">Vertical</div>
+        <div class="horizonal">Horizontal</div>
+    </div>
+</body>
+
+</html>

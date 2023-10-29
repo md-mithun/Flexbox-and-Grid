@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    background-color: lightseagreen;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    height: 400px;
+    /* align-items: start;
+    align-items: end; */
+    align-items: center;
+    /* align-items: start; */
+    /* align-items: end; */
+    /* align-content: start; */
+    /* align-content: center; */
+    /* align-content: end; */
+}
+
+.items {
+    background-color: yellow;
+    padding: 5px;
+    margin: 10px;
+    width: 400px;
+    /* This is equivalent to: */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: auto; */
+}
+
+
+.item-1 {}
+
+.item-2 {}
+
+.item-3 {}
+
+.item-4 {
+    flex-shrink: 0;/*fixed minimum width:400px ,no shrink*/
+}
+
+.item-5 {
+    flex-grow: 1;/*fixed maximum width:400px, no growing*/
+}
+
+/* 
+##--- ফ্লেক্সবক্সের flex-grow, flex-shrink, flex-basis প্রপার্টিগুলো হলো সবচেয়ে গুরুত্বপূর্ণ তিনটি প্রপার্টি। এগুলো নিয়ন্ত্রণ করে ফ্লেক্স আইটেমগুলো ফ্লেক্স কন্টেইনারের মধ্যে কীভাবে বিন্যস্ত হবে, যখন অতিরিক্ত স্থান থাকে এবং যখন পর্যাপ্ত স্থান থাকে না।
+
+flex-grow:-
+ফ্লেক্স-গ্রো প্রপার্টিটি নিয়ন্ত্রণ করে ফ্লেক্স কন্টেইনারে অতিরিক্ত স্থান থাকলে কোনো আইটেম কতটা বাড়বে। ডিফল্ট মান ০, যার মানে আইটেমটি একেবারেই বাড়বে না। ১ মানে আইটেমটি সমস্ত অতিরিক্ত স্থান পূরণ করতে বাড়বে.
+
+flex-shrink:-
+ফ্লেক্স-শ্রিংক প্রপার্টিটি নিয়ন্ত্রণ করে ফ্লেক্স কন্টেইনারে পর্যাপ্ত স্থান না থাকলে কোনো আইটেম কতটা ছোট হবে। ডিফল্ট মান ১, যার মানে আইটেমটি অন্যান্য আইটেমগুলোর সমান ছোট হবে। ০ মানে আইটেমটি একেবারেই ছোট হবে না.
+
+flex-basis:-
+ফ্লেক্স-বেসিস প্রপার্টিটি আইটেমটির প্রাথমিক আকার সেট করে। ডিফল্ট মান auto, যার মানে আইটেমটি তার স্বাভাবিক আকারে আসবে। আপনি আইটেমটির জন্য একটি নির্দিষ্ট প্রস্থ বা উচ্চতাও নির্দিষ্ট করতে পারেন। */
